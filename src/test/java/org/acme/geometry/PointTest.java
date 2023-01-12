@@ -9,7 +9,7 @@ public class PointTest {
     @Test
     public void testValue(){
         // TODO
-        Coordinate c = new Coordinate();
+        Coordinate c = new Coordinate(3.0,4.0);
         Assert.assertEquals(3.0, c.getX(), EPSILON);
         Assert.assertEquals(4.0, c.getY(), EPSILON);
     }
@@ -17,7 +17,9 @@ public class PointTest {
     public void TestisEmpty(){
         // TODO
         Point d= new Point();
+        Coordinate c = new Coordinate(2.0,3.0);
+        Point g= new Point(c);
         Assert.assertTrue(d.isEmpty());
-        Assert.assertFalse(d.isEmpty());
+        Assert.assertFalse(g.isEmpty());
     }
 }
