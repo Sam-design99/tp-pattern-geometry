@@ -20,6 +20,11 @@ public class Point implements Geometry{
         return coordinate.isEmpty();
     }
 
+    @Override
+    public void translate(double dx, double dy) {
+        this.coordinate= new Coordinate(dx+this.coordinate.getX(), dy+this.coordinate.getY());
+    }
+
     public Coordinate getCoordinate() {
         return coordinate;
     }
