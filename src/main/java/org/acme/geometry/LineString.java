@@ -37,5 +37,18 @@ public class LineString implements Geometry{
             points.get(i).translate(dx,dy);
         }
     }
+
+    @Override
+    public Geometry clone() {
+
+        LineString cpoints= new LineString(this.points);
+
+        for (int i = 0; i < points.size(); i++){
+            points.get(i).clone();
+
+        }
+        return cpoints;
+
+    }
 }
 

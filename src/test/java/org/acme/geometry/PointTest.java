@@ -22,4 +22,13 @@ public class PointTest {
         Assert.assertTrue(d.isEmpty());
         Assert.assertFalse(g.isEmpty());
     }
+    public void testranslatePoint(){
+        Coordinate d = new Coordinate(2.0,3.0);
+        Point g= new Point(d);
+        g.translate(1.0,1.0);
+        Assert.assertEquals(3.0 , g.getCoordinate().getX(), EPSILON);
+        Assert.assertEquals(4.0 , g.getCoordinate().getY(), EPSILON);
+
+    }
+
 }

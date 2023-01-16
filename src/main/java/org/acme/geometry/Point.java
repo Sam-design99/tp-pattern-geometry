@@ -29,5 +29,14 @@ public class Point implements Geometry{
         return coordinate;
     }
 
+    @Override
+    public Point clone() {
+        Point bis= new Point(this.coordinate);
+        return bis;
+
+    }
+
+
+
 }
 
