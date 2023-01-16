@@ -1,14 +1,15 @@
 package org.acme.geometry;
 
-public class Envelloppe {
+public class Envelope {
     private Coordinate bottomLeft;
     private Coordinate topRight;
 
-    public Envelloppe(){
-
+    public Envelope(){
+        this.bottomLeft=new Coordinate();
+        this.topRight=new Coordinate();
     }
 
-    public Envelloppe(Coordinate bottomLeft, Coordinate topRight){
+    public Envelope(Coordinate bottomLeft, Coordinate topRight){
         this.bottomLeft=bottomLeft;
         this.topRight=topRight;
 
